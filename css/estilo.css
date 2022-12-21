@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
+}
+:root{
+    --cinza: #474747;
+    --rosa: #C92071;
+}
+header{
+    background-color: #FFFFFF;
+    padding: 25px 128px;
+}
+header figure{
+    display: flex;
+    align-items: center;
+}
+header figure img{
+    width: 23px;
+    height: 23px;
+    display: block;
+}
+header figure h1{
+    font-size: 24px;
+    line-height: 30px;
+    margin-left: 6px;
+    color: var(--rosa);
+}
+#login{
+    background: linear-gradient(180deg, #B5B6F2 0%, #EFEFFF 100%);
+    padding: 120px 100px;
+    display: flex;
+}
+#login .esquerda,
+#login .direita{
+    width: 50%;
+}
+#login form{
+    width: 583px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 30px;
+}
+#login form h2{
+    line-height: 36px;
+    font-size: 32px;
+    color: #1f1f1f;
+    letter-spacing: 1px;
+}
+#login form p{
+    font-size: 16px;
+    color: var(--cinza);
+    letter-spacing: 0.75px;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+#login form label{
+    font-size: 12px;
+    line-height: 24px;
+    color: var(--cinza);
+    letter-spacing: 0.75px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#login form input{
+    width: 100%;
+    height: 60px;
+    border-radius: 8px;
+    padding: 0 25px;
+    background-color: #47474710;
+    border: 1px solid transparent;
+    margin-bottom: 20px;
+    outline: 0;
+    transition-duration: .2s;
+}
+#login form input:focus{
+    border-color: var(--rosa);
+}
