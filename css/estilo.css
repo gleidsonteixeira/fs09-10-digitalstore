@@ -12,6 +12,8 @@
 :root{
     --cinza: #474747;
     --rosa: #C92071;
+    --rosa-hover: #b11c64;
+    --l-space: 0.75px;
 }
 header{
     background-color: #FFFFFF;
@@ -56,7 +58,7 @@ header figure h1{
 #login form p{
     font-size: 16px;
     color: var(--cinza);
-    letter-spacing: 0.75px;
+    letter-spacing: var(--l-space);
     line-height: 28px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -65,7 +67,7 @@ header figure h1{
     font-size: 12px;
     line-height: 24px;
     color: var(--cinza);
-    letter-spacing: 0.75px;
+    letter-spacing: var(--l-space);
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
@@ -83,4 +85,45 @@ header figure h1{
 }
 #login form input:focus{
     border-color: var(--rosa);
+}
+#login form input:last-of-type{
+    margin-bottom: 30px;
+}
+#login form a{
+    color: var(--cinza);
+    text-decoration: underline;
+}
+#login form .recuperar{
+    display: block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 22px;
+}
+#login form button{
+    width: 100%;
+    line-height: 48px;
+    background-color: var(--rosa);
+    border: 0;
+    border-radius: 8px;
+    color: #F5F5F5;
+    font-size: 16px;
+    letter-spacing: var(--l-space);
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: .2s;
+}
+#login form button:hover{
+    background-color: var(--rosa-hover);
+}
+#login form .form-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+#login form .form-footer p{
+    margin: 0;
+}
+#login form .form-footer img{
+    margin-left: 20px;
 }

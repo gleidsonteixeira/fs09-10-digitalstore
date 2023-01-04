@@ -17,14 +17,14 @@
         </header>
         <section id="login">
             <div class="esquerda">
-                <form action="">
+                <form action="" onsubmit="validarFormulario()">
                     <h2>Acesse sua conta</h2>
                     <p>Novo cliente? Então registre-se <a href="cadastro.html">aqui</a>.</p>
                     <label for="email">Login *</label>
-                    <input type="email" id="email" placeholder="Insira seu login ou email">
+                    <input type="text" id="email" placeholder="Insira seu login ou email">
                     <label for="senha">Senha *</label>
                     <input type="password" id="senha" placeholder="Insira sua senha">
-                    <a href="recuperar.html">Esqueci minha senha</a>
+                    <a href="recuperar.html" class="recuperar">Esqueci minha senha</a>
                     <button type="submit">Acessar conta</button>
                     <div class="form-footer">
                         <p>Ou faça login com</p>
@@ -33,10 +33,11 @@
                     </div>
                 </form>
             </div>
-            <div class="direita">
+            <div class="direita" style="display: none;">
                 aqui vai ter dois sapatos
             </div>
         </section>
     </main>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
