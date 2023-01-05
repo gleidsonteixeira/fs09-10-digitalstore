@@ -5,38 +5,50 @@ function verificarEmail()
     let email_data = email.value.split("@");
     if(email_data[0].length > 4){
         if(email.value.indexOf("@") > 0){
-            if(email_data[1].indexOf(".") > 0){
-                alert("Email esta ok");
-            }else{
-                alert("Está faltando o .");
+            if(!email_data[1].indexOf(".") > 0){
+                email_alert.innerHTML = " (Está faltando o .)";
             }
         }else{
-            alert("Está faltando o @");
+            email_alert.innerHTML = " (Está faltando o @)";
         }
     } else {
-        alert("Email inválido, curto demais")
+        email_alert.innerHTML = " (Email inválido, curto demais)";
     }
 }
 
 function verificarSenha()
 {
     if(senha.value.length >= 8){
+        let temNumero = 0;
+        let soLetras = [];
         for(let i = 0; i < senha.value.length; i++){
-            if(isNaN(parseInt(senha.value[i]))){
-                console.log(senha.value[i] +" é letra")
+            if(!isNaN(parseInt(senha.value[i]))){
+                temNumero++;
             }else{
-                console.log(senha.value[i] +" é numero")
+                soLetras.push(senha.value[i]);
             }
         }
-        alert("Senha está ok");
+        if(temNumero > 0){
+            let temMauisculo = 0;
+            soLetras.forEach(letra => {
+                if(letra === letra.toUpperCase()){
+                    temMauisculo++;
+                }
+            });
+            if(!temMauisculo > 0){
+                senha_alert.innerHTML = " (Tem que ter uma letra Maiuscula)";   
+            }
+        }else{
+            senha_alert.innerHTML = " (Tem que ter um numero)";
+        }
     }else{
-        alert("Senha pequena demais");
+        senha_alert.innerHTML = " (Senha pequena demais)";
     }
 }
 
 function validarFormulario()
 {
     event.preventDefault();
-    // verificarEmail();
+    verificarEmail();
     verificarSenha();
 }

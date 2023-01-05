@@ -72,6 +72,9 @@ header figure h1{
     font-weight: bold;
     margin-bottom: 5px;
 }
+#login form label span{
+    color: red;
+}
 #login form input{
     width: 100%;
     height: 60px;
